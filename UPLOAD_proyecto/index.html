@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>LakeView Investigación</title>
+</head>
+<body>
+    <div id="aplicacion">
+        <h1><center>LakeView</center></h1>
+
+        <div id="menu">
+
+    <button type="button" onclick="Fondo()">FONDO DE PANTALLA</button>
+            <button onclick="mostrarFormulario()">AGREGAR SUJETOS NUEVOS</button>
+        </div>
+
+        <div id="listaSujetos"></div>
+
+        <div id="formulario" style="display: none;">
+            <h2><center>SUJETO</center></h2>
+
+            <form onsubmit="guardarSujeto(event)">
+                <div class="form-group">
+                    <label for="nombre">NOMBRE:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">TIPO:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="vivo">VIVO</option>
+                        <option value="descargado">DESCARGADO</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ubicacion">UBICACIÓN:</label>
+                    <input type="text" id="ubicacion" name="ubicacion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descargadoDesde">DESCARGADO DESDE:</label>
+                    <input type="text" id="descargadoDesde" name="descargadoDesde">
+                </div>
+
+                <div class="form-group">
+                    <label for="culpabilidad">CULPABILKIDAD:</label>
+                    <select id="culpabilidad" name="culpabilidad" required>
+                        <option value="posible cooperador">POSIBLE COOPERADOR</option>
+                        <option value="cooperador">COOPERADOR</option>
+                        <option value="delincuente">DELINCUENTE</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="urlImagen">URL IMAGEN:</label>
+                    <input type="text" id="urlImagen" name="urlImagen">
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios">COMENTARIOS:</label>
+                    <textarea id="comentarios" name="comentarios"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="centrado">GUARDAR</button>                </div>
+            </form>
+        </div>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
